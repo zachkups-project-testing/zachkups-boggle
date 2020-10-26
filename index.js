@@ -53,6 +53,7 @@ class LobbyGame {
         this.maxplayers = gameJSON.maxplayers || 2;
         this.players = gameJSON.players || {"player1": "p1",
                                             "player2": "p2"};
+        this.status = gameJSON.status || "waiting";
         // this.render();
     }
 
@@ -62,6 +63,7 @@ class LobbyGame {
         gameObj.gameboardstring = this.gameboardstring;
         gameObj.maxplayers = this.maxplayers;
         gameObj.players = this.players;
+        gameObj.status = this.status;
         return gameObj;
     }
 
