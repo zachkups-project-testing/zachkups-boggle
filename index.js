@@ -161,7 +161,6 @@ $("#enterCode").bind("enterKey", function(e) {
         });
         firebase.database().ref("games").child(code).on("value", function(gameSnap) {
             existingGame = gameSnap.val();
-            console.log(existingGame);
             if (existingGame.players.player1 !== null) {
                 if ((existingGame.players.player1.ready == true) && (existingGame.players.player2.ready == true)) {
                     window.location.href = `player2/game.html?gameid=${code}`;
@@ -173,7 +172,6 @@ $("#enterCode").bind("enterKey", function(e) {
 $("#enterCode").keyup(function(e) {
     if (e.keyCode == 13) {
         $(this).trigger("enterKey");
-        console.log("1");
     }
 });
 
