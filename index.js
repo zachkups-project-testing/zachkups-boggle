@@ -91,6 +91,7 @@ class LobbyGame {
 }
 
 $( "#genCode" ).click(function() {
+    console.log("HELLO");
     let newGame = new LobbyGame({});
     newGame.players = {"player1": {"username": $("#username").val() || "Player1",
                                     "ready": false}
