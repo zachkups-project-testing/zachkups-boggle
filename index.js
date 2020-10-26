@@ -129,10 +129,8 @@ $("#enterCode").bind("enterKey", function(e) {
     // TODO: Make sure max players stop at 2
     let code = $("#enterCode").val();
     let username = $("#username").val();
-    console.log(code);
     firebase.database().ref("games").once("value", gameSnap => {
         if (Object.keys(gameSnap.val()).includes(code)) {
-            console.log(code);
             let existingGame = gameSnap.val()[code];
             existingGame.players["player2"] = {"username": username || "Player2",
                                 "ready": false};
@@ -161,12 +159,12 @@ $("#enterCode").bind("enterKey", function(e) {
             existingGame.players.player2.ready = true;
             firebase.database().ref("games").child(code).set(existingGame);
         });
-        gamesDB.child(gameid).on("value", function(gameSnap) {
+        firebase.database().ref("games").child(code).on("value", function(gameSnap) {
             existingGame = gameSnap.val();
             console.log(existingGame);
-            if (existingGame.players.player2 !== null) {
-                if ((existingGame.players.player2.ready == true) && (existingGame.players.player2.ready == true)) {
-                    window.location.href = `player2/game.html?gameid=${gameid}`;
+            if (existingGame.players.player1 !== null) {
+                if ((existingGame.players.player1.ready == true) && (existingGame.players.player2.ready == true)) {
+                    window.location.href = `player2/game.html?gameid=${code}`;
                 }
             }
         });
