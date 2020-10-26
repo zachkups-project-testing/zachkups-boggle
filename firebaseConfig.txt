@@ -1,0 +1,11 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyB4Q1_4syNWg1OvivZmm_wM-Ng5Ywxy6pQ",
+    authDomain: "game-87e77.firebaseapp.com",
+    databaseURL: "https://game-87e77.firebaseio.com",
+    projectId: "game-87e77",
+    storageBucket: "game-87e77.appspot.com",
+    messagingSenderId: "451528605862",
+    appId: "1:451528605862:web:8f59faab9fcdd2826cf467"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);

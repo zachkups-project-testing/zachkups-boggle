@@ -62,7 +62,6 @@ class LobbyGame {
         gameObj.gameboardstring = this.gameboardstring;
         gameObj.maxplayers = this.maxplayers;
         gameObj.players = this.players;
-        gameObj.status = this.status;
         return gameObj;
     }
 
