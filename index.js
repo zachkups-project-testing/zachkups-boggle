@@ -129,6 +129,7 @@ $("#enterCode").bind("enterKey", function(e) {
     // TODO: Make sure max players stop at 2
     let code = $("#enterCode").val();
     let username = $("#username").val();
+    console.log("CREATING GAME");
     firebase.database().ref("games").once("value", gameSnap => {
         if (Object.keys(gameSnap.val()).includes(code)) {
             let existingGame = gameSnap.val()[code];
