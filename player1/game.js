@@ -33,7 +33,7 @@ function startTimer(e) {
     //     document.getElementById("box" + i).innerText = "X";
     // };
     let guessed = [];
-    let timer = 20;
+    let timer = 60;
     return new Promise((resolve, reject) => {
         let interval = setInterval(function() {
             timer--;
