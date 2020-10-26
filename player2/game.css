@@ -1,0 +1,52 @@
+body {
+    font-family: 'Fredoka One', cursive !important;
+    background-color: lightyellow !important;
+    height: 100% !important;
+}
+
+.timer {
+    font-size: 2.5em;
+    padding: 10px;
+    padding-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+    background: lightskyblue;
+    color: white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 100px !important;
+    color: red !important;
+}
+
+h2 {
+    font-size: 40px !important;
+    text-decoration: underline;
+    color: blue !important;
+}
+td {
+    border: 2px solid blue;
+    padding: 20px 40px 20px 40px;
+    margin: 20px;
+    font-size: 40px;
+    color: green;
+}
+
+td:hover {
+    background-color: yellow !important;
+}
+
+#word {
+    color: green;
+    font-size: 40px;
+}
+
+#guessed {
+    border-left: 3px solid green;
+    height: 100%;
+}
+
+#words {
+    color: red;
+}

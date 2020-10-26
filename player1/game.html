@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Game</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+</head>
+<body>
+    <div class="timer">60</div>
+    <div class="container d-flex flex-row">
+        <div class="container d-flex align-items-start flex-column">
+            <h1>Word Game</h1>
+            <table>
+                <tr>
+                    <td id="box0">...</td>
+                    <td id="box1">...</td>
+                    <td id="box2">...</td>
+                    <td id="box3">...</td>
+                    <td id="box4">...</td>
+                </tr>
+                <tr>
+                    <td id="box5">...</td>
+                    <td id="box6">...</td>
+                    <td id="box7">...</td>
+                    <td id="box8">...</td>
+                    <td id="box9">...</td>
+                </tr>
+                <tr>
+                    <td id="box10">...</td>
+                    <td id="box11">...</td>
+                    <td id="box12">...</td>
+                    <td id="box13">...</td>
+                    <td id="box14">...</td>
+                </tr>
+                <tr>
+                    <td id="box15">...</td>
+                    <td id="box16">...</td>
+                    <td id="box17">...</td>
+                    <td id="box18">...</td>
+                    <td id="box19">...</td>
+                </tr>
+                <tr>
+                    <td id="box20">...</td>
+                    <td id="box21">...</td>
+                    <td id="box22">...</td>
+                    <td id="box23">...</td>
+                    <td id="box24">...</td>
+                </tr>
+                </tr>
+            </table>
+            <div id="selected" class="d-flex flex-row mt-5">
+                <p id="word">...</p>
+                <button type="button" class="btn btn-outline-primary ml-5" id="submit">Submit</button>
+                <button type="button" class="btn btn-outline-danger ml-1" id="clear">Clear</button>
+            </div>
+        </div>
+        <div id="guessed" class="container ml-5">
+            <h2 class="ml-5">Guessed Words</h1>
+            <ul id="words">
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="game.js"></script>
+</body>
+</html>
